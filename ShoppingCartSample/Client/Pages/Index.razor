@@ -1,0 +1,155 @@
+﻿@page "/"
+@inject BlazorApp1.Client.Services.IProductService ProductService
+@inject Blazor.Extensions.Storage.LocalStorage Storage
+
+<div class="container">
+    <h3 class="h3">Shopping </h3>
+    @if (!string.IsNullOrEmpty(Message))
+    {
+        <div class="alert alert-@type">
+            @Message
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+
+    @if (showProduct && Selected != null)
+    {
+        <div class="container">
+            <div class="row">
+                <div class="col-10">
+                    <h5>@Selected.Title Detail</h5>
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-sm btn-danger float-right" @onclick="@(() => RemoveDetail())">Close Detail <i class="fa fa-times"></i></button>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-3">
+                    <img src="https://dummyimage.com/200x250/636363/fff" />
+                </div>
+                <div class="col-md-9">
+                    <table class="table">
+                        <tr>
+                            <th>Title</th>
+                            <td>@Selected.Title</td>
+                        </tr>
+                        <tr>
+                            <th>Description</th>
+                            <td>@Selected.Description</td>
+                        </tr>
+                        <tr>
+                            <th>Price</th>
+                            <td>@Selected.Price</td>
+                        </tr>
+                        <tr>
+                            <th>Quantity</th>
+                            <td><input type="number" min="1" @bind-value="@quantity" /></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn btn-primary" @onclick="@(() => AddToCart(Selected))"><span class="fa fa-plus"></span> Add To Cart</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    }
+    <div class="row">
+        @if (products != null)
+        {
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Title</th>
+                        <th>Stock</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var product in products)
+                    {
+                        <tr>
+                            <td><img src="https://dummyimage.com/50x50/636363/fff" /></td>
+                            <td>@product.Title</td>
+                            <td>@product.Stock</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" @onclick="@(() => Show(product))">Get Detail</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p><em>Loading Product List...</em></p>
+        }
+    </div>
+</div>
+
+@code{
+    Product[] products;
+    string Message = "";
+    string type = "danger";
+    bool showProduct = false;
+    Product Selected = null;
+    int quantity = 1;
+
+    // on render of page
+    protected override async Task OnInitializedAsync()
+    {
+        products = await ProductService.GetProducts();
+    }
+
+    // show selected product
+    void Show(Product product)
+    {
+        showProduct = true;
+        Selected = product;
+    }
+
+    void RemoveDetail()
+    {
+        showProduct = false;
+        Selected = null;
+    }
+
+    // add to cart
+    async Task AddToCart(Product product)
+    {
+        if (product.Stock < 1 || product.Stock < quantity)
+        {
+            type = "danger";
+            Message = "There is no product in stock. Product: " + product.Title;
+            return;
+        }
+
+        var cart = await Storage.GetItem<Cart>("Cart");
+        if (cart == null) cart = new Cart
+        {
+            Products = new List<CartLine>(),
+        };
+
+        var prd = cart.Products.Where(c => c.Product.ProductId == product.ProductId).FirstOrDefault();
+        if (prd == null)
+        {
+            cart.Products.Add(new CartLine
+            {
+                Product = product,
+                Quantity = quantity
+            });
+        }
+        else
+        {
+            prd.Quantity += quantity;
+        }
+
+        await Storage.SetItem<Cart>("Cart", cart);
+        type = "success";
+        Message = quantity + " " + product.Title + " added to your shopping cart";
+        Selected = null;
+        quantity = 1;
+    }
+}

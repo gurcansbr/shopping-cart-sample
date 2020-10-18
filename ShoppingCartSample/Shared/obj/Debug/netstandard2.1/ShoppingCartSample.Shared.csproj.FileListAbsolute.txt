@@ -1,0 +1,9 @@
+C:\Users\gurca\source\repos\ShoppingCartSample\ShoppingCartSample\Shared\bin\Debug\netstandard2.1\ShoppingCartSample.Shared.deps.json
+C:\Users\gurca\source\repos\ShoppingCartSample\ShoppingCartSample\Shared\bin\Debug\netstandard2.1\ShoppingCartSample.Shared.dll
+C:\Users\gurca\source\repos\ShoppingCartSample\ShoppingCartSample\Shared\bin\Debug\netstandard2.1\ShoppingCartSample.Shared.pdb
+C:\Users\gurca\source\repos\ShoppingCartSample\ShoppingCartSample\Shared\obj\Debug\netstandard2.1\ShoppingCartSample.Shared.AssemblyInfoInputs.cache
+C:\Users\gurca\source\repos\ShoppingCartSample\ShoppingCartSample\Shared\obj\Debug\netstandard2.1\ShoppingCartSample.Shared.AssemblyInfo.cs
+C:\Users\gurca\source\repos\ShoppingCartSample\ShoppingCartSample\Shared\obj\Debug\netstandard2.1\ShoppingCartSample.Shared.csproj.CoreCompileInputs.cache
+C:\Users\gurca\source\repos\ShoppingCartSample\ShoppingCartSample\Shared\obj\Debug\netstandard2.1\ShoppingCartSample.Shared.dll
+C:\Users\gurca\source\repos\ShoppingCartSample\ShoppingCartSample\Shared\obj\Debug\netstandard2.1\ShoppingCartSample.Shared.pdb
+C:\Users\gurca\source\repos\ShoppingCartSample\ShoppingCartSample\Shared\obj\Debug\netstandard2.1\ShoppingCartSample.Shared.csprojAssemblyReference.cache

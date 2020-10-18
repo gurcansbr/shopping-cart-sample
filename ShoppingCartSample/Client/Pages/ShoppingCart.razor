@@ -1,0 +1,97 @@
+﻿@page "/shoppingcart"
+@inject Blazor.Extensions.Storage.LocalStorage Storage
+@inject NavigationManager NavigationManager
+
+<h3>Shopping Cart</h3>
+
+<div class="container mb-4">
+    <div class="row">
+        @if (!string.IsNullOrEmpty(Message))
+        {
+            <div class="alert alert-success">
+                @Message
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        }
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col"> </th>
+                            <th scope="col">Product</th>
+                            <th scope="col">Available</th>
+                            <th scope="col" class="text-center">Quantity</th>
+                            <th scope="col" class="text-right">Price</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (cart != null)
+                        {
+                            @foreach (CartLine cartItem in cart.Products)
+                            {
+                                <tr>
+                                    <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
+                                    <td>@cartItem.Product.Title</td>
+                                    <td>In stock</td>
+                                    <td><input class="form-control" type="text" value="@cartItem.Quantity" /></td>
+                                    <td class="text-right">@cartItem.Product.Price</td>
+                                    <td class="text-right"><button @onclick="@(() => RemoveById(cartItem.Product))" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button></td>
+                                </tr>
+                            }
+                        }
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><strong>Total</strong></td>
+                            <td class="text-right"><strong>@total</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col mb-2">
+            <div class="row">
+                <div class="col-sm-12  col-md-6">
+                    <button class="btn btn-block btn-light" @onclick="@ContinueShopping">Continue Shopping</button>
+                </div>
+                <div class="col-sm-12 col-md-6 text-right">
+                    <button type="button" class="btn btn-block btn-success text-uppercase">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    Cart cart;
+    double total = 0;
+    string Message = "";
+
+    // on render of page
+    protected override async Task OnInitializedAsync()
+    {
+        cart = await Storage.GetItem<Cart>("Cart");
+        total = cart.Products.Sum(c => c.Product.Price * c.Quantity);
+    }
+
+    // remove item from shopping cart
+    async Task RemoveById(Product product)
+    {
+        cart = await Storage.GetItem<Cart>("Cart");
+        cart.Products.RemoveAll(c => c.Product.ProductId == product.ProductId);
+        await Storage.SetItem<Cart>("Cart", cart);
+        total = cart.Products.Sum(c => c.Product.Price * c.Quantity);
+        Message = product.Title + " removed from your shopping cart";
+    }
+
+    void ContinueShopping()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+}

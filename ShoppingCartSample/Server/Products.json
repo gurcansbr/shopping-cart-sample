@@ -1,0 +1,30 @@
+[
+  {
+    "ProductId": 1,
+    "Title": "Iphone 11",
+    "Description": "Iphone 11 is a product of Apple",
+    "Stock": 4,
+    "Price": 7999.99
+  },
+  {
+    "ProductId": 2,
+    "Title": "Iphone 11 Pro",
+    "Description": "Iphone 11 Pro is a product of Apple",
+    "Stock": 2,
+    "Price": 11999.99
+  },
+  {
+    "ProductId": 3,
+    "Title": "Iphone 11 Plus",
+    "Description": "Iphone 11 Plus is a product of Apple",
+    "Stock": 1,
+    "Price": 9999.99
+  },
+  {
+    "ProductId": 4,
+    "Title": "Iphone 11 Pro Plus",
+    "Description": "Iphone 11 Pro Plus is a product of Apple",
+    "Stock": 0,
+    "Price": 12999.99
+  }
+]
