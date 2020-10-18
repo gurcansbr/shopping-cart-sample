@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCartSample.Server", "ShoppingCartSample\Server\ShoppingCartSample.Server.csproj", "{88C20266-F228-4FFE-A1FE-DC9A64FF8776}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingCartSample.Server", "ShoppingCartSample\Server\ShoppingCartSample.Server.csproj", "{88C20266-F228-4FFE-A1FE-DC9A64FF8776}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCartSample.Client", "ShoppingCartSample\Client\ShoppingCartSample.Client.csproj", "{CA52BB42-3314-485A-98F6-74DC2E3C4124}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingCartSample.Client", "ShoppingCartSample\Client\ShoppingCartSample.Client.csproj", "{CA52BB42-3314-485A-98F6-74DC2E3C4124}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCartSample.Shared", "ShoppingCartSample\Shared\ShoppingCartSample.Shared.csproj", "{927067E5-3935-49CB-B211-D8BE9193B049}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingCartSample.Shared", "ShoppingCartSample\Shared\ShoppingCartSample.Shared.csproj", "{927067E5-3935-49CB-B211-D8BE9193B049}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -7,7 +7,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Linq;
 using ShoppingCartSample.Client.Services;
-using Blazor.Extensions.Storage;
 
 namespace BlazorApp1.Server
 {
@@ -24,7 +23,6 @@ namespace BlazorApp1.Server
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddStorage();
             services.AddHttpClient<IProductService, ProductService>();
             services.AddControllersWithViews();
             services.AddRazorPages();

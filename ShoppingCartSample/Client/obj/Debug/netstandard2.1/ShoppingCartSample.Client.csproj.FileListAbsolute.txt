@@ -375,6 +375,10 @@ C:\Users\gurca\source\repos\ShoppingCartSample\ShoppingCartSample\Client\obj\Deb
 C:\Users\gurca\source\repos\ShoppingCartSample\ShoppingCartSample\Client\obj\Debug\netstandard2.1\staticwebassets\ShoppingCartSample.Client.StaticWebAssets.xml
 C:\Users\gurca\source\repos\ShoppingCartSample\ShoppingCartSample\Client\obj\Debug\netstandard2.1\ShoppingCartSample.Client.dll
 C:\Users\gurca\source\repos\ShoppingCartSample\ShoppingCartSample\Client\obj\Debug\netstandard2.1\ShoppingCartSample.Client.pdb
-C:\Users\gurca\source\repos\ShoppingCartSample\ShoppingCartSample\Client\obj\Debug\netstandard2.1\integrity\BTdY4Cn_PzQyB9q0L-d-NWzmR2aX8Vorfn42gNVH334=.hash
-C:\Users\gurca\source\repos\ShoppingCartSample\ShoppingCartSample\Client\obj\Debug\netstandard2.1\integrity\HtS9bi_Z_YGw25JgWMD66XEFY7vuGNUNoLZOTkYymQY=.hash
-C:\Users\gurca\source\repos\ShoppingCartSample\ShoppingCartSample\Client\obj\Debug\netstandard2.1\integrity\8Gi1U0bM_KlgoKEjJyr7PK9TW-UCyT7dERyGqbq1ctM=.hash
+C:\Users\gurca\source\repos\ShoppingCartSample\ShoppingCartSample\Client\obj\Debug\netstandard2.1\RazorDeclaration\Shared\Topbar.razor.g.cs
+C:\Users\gurca\source\repos\ShoppingCartSample\ShoppingCartSample\Client\obj\Debug\netstandard2.1\Razor\Shared\Topbar.razor.g.cs
+C:\Users\gurca\source\repos\ShoppingCartSample\ShoppingCartSample\Client\obj\Debug\netstandard2.1\RazorDeclaration\Shared\Messages.razor.g.cs
+C:\Users\gurca\source\repos\ShoppingCartSample\ShoppingCartSample\Client\obj\Debug\netstandard2.1\Razor\Shared\Messages.razor.g.cs
+C:\Users\gurca\source\repos\ShoppingCartSample\ShoppingCartSample\Client\obj\Debug\netstandard2.1\integrity\hZseu31v8QzqHLwNI43beRx29htVUqf8iPUOTrui9s8=.hash
+C:\Users\gurca\source\repos\ShoppingCartSample\ShoppingCartSample\Client\obj\Debug\netstandard2.1\integrity\Ly4X2nQn5NevN65Lj5QLRMFdEtB_Amk9-5JBvSZBHzw=.hash
+C:\Users\gurca\source\repos\ShoppingCartSample\ShoppingCartSample\Client\obj\Debug\netstandard2.1\integrity\u9sXAQkuiF3w_ScS10jEga_Qw5BWa7hMDndCJKMWsEM=.hash

@@ -1,7 +1,7 @@
 {
   "FilesToCompress": [
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\BTdY4Cn_PzQyB9q0L-d-NWzmR2aX8Vorfn42gNVH334=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\hZseu31v8QzqHLwNI43beRx29htVUqf8iPUOTrui9s8=.hash",
       "Source": "C:\\Users\\gurca\\source\\repos\\ShoppingCartSample\\ShoppingCartSample\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\ShoppingCartSample.Client.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/ShoppingCartSample.Client.dll.gz"
     },
@@ -271,7 +271,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.JSInterop.WebAssembly.dll.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\HtS9bi_Z_YGw25JgWMD66XEFY7vuGNUNoLZOTkYymQY=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\Ly4X2nQn5NevN65Lj5QLRMFdEtB_Amk9-5JBvSZBHzw=.hash",
       "Source": "C:\\Users\\gurca\\source\\repos\\ShoppingCartSample\\ShoppingCartSample\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\ShoppingCartSample.Client.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/ShoppingCartSample.Client.pdb.gz"
     },
@@ -306,7 +306,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.webassembly.js.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\8Gi1U0bM_KlgoKEjJyr7PK9TW-UCyT7dERyGqbq1ctM=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\u9sXAQkuiF3w_ScS10jEga_Qw5BWa7hMDndCJKMWsEM=.hash",
       "Source": "C:\\Users\\gurca\\source\\repos\\ShoppingCartSample\\ShoppingCartSample\\Client\\obj\\Debug\\netstandard2.1\\blazor\\blazor.boot.json",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.boot.json.gz"
     }
